@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ConversionViewController:UIViewController, UITextFieldDelegate{
     
@@ -68,15 +69,23 @@ class ConversionViewController:UIViewController, UITextFieldDelegate{
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        let letterSet:NSCharacterSet = NSCharacterSet.letterCharacterSet()
+        
 //        print("Current text: \(textField.text)")
 //        print("Replacement text: \(string)")
         let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
+    
         let replacementTextHasDecimalSeparator = string.rangeOfString(".")
-        if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil{
+
+        if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
             return false
         }
-        else{
-            return true
+        else if string.rangeOfCharacterFromSet(letterSet) == nil{
+        return true
+        }
+
+        else {
+            return false
         }
         
     }
