@@ -9,10 +9,38 @@
 import UIKit
 import Foundation
 
+extension CGFloat {
+    static func random()->CGFloat{
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
+}
+
+extension UIColor {
+    static func randomColor()->UIColor{
+        let r = CGFloat.random()
+        let b = CGFloat.random()
+        let g = CGFloat.random()
+        return UIColor(red:r, green:g, blue:b, alpha:1)
+    }
+    
+}
 class ConversionViewController:UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var celsiusLabel: UILabel!
+    
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("ConversionViewController loaded its new")
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        view.backgroundColor = UIColor.randomColor()
+    }
     
     let numberFormatter:NSNumberFormatter = {
         let nf = NSNumberFormatter()
@@ -70,17 +98,19 @@ class ConversionViewController:UIViewController, UITextFieldDelegate{
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         let letterSet:NSCharacterSet = NSCharacterSet.letterCharacterSet()
-        
+        let symbolSet:NSCharacterSet = NSCharacterSet.symbolCharacterSet()
+        let whitespaceSet:NSCharacterSet = NSCharacterSet.whitespaceCharacterSet()
 //        print("Current text: \(textField.text)")
 //        print("Replacement text: \(string)")
         let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
     
         let replacementTextHasDecimalSeparator = string.rangeOfString(".")
+        
 
         if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
             return false
         }
-        else if string.rangeOfCharacterFromSet(letterSet) == nil{
+        else if string.rangeOfCharacterFromSet(letterSet) == nil && string.rangeOfCharacterFromSet(symbolSet) == nil && string.rangeOfCharacterFromSet(whitespaceSet) == nil{
         return true
         }
 
