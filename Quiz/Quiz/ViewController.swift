@@ -87,7 +87,15 @@ class ViewController: UIViewController {
 //                swap(&self.currentQuestionLabelCenterXConstraint, &self.nextQuestionLabelCenterXConstraint)
 //                self.updateOffScreenLabel()
 //        })
-        UIView.animateWithDuration(<#T##duration: NSTimeInterval##NSTimeInterval#>, delay: <#T##NSTimeInterval#>, usingSpringWithDamping: <#T##CGFloat#>, initialSpringVelocity: <#T##CGFloat#>, options: <#T##UIViewAnimationOptions#>, animations: <#T##() -> Void#>, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
+        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: [.CurveLinear], animations: {
+                            self.currentQuestionLabel.alpha = 0
+                            self.nextQuestionLabel.alpha = 1
+                            self.view.layoutIfNeeded()
+            }, completion: { _ in
+                                swap(&self.currentQuestionLabel, &self.nextQuestionLabel)
+                                swap(&self.currentQuestionLabelCenterXConstraint, &self.nextQuestionLabelCenterXConstraint)
+                                self.updateOffScreenLabel()
+                        })
     }
     
     func updateOffScreenLabel(){
