@@ -43,22 +43,33 @@
                                     <action selector="nextQuestButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDv-ZL-0pH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdv-f8-y2n">
+                                <rect key="frame" x="279" y="52" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fOM-T6-HWK" firstAttribute="centerX" secondItem="NEL-L7-afE" secondAttribute="centerX" id="3Mo-Wi-r7j"/>
-                            <constraint firstItem="wpV-LS-ioH" firstAttribute="centerX" secondItem="NEL-L7-afE" secondAttribute="centerX" id="4QU-55-oNW"/>
+                            <constraint firstItem="wpV-LS-ioH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4OO-SG-2dX"/>
                             <constraint firstItem="NEL-L7-afE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="659-z9-0wh"/>
                             <constraint firstItem="Fz4-9P-oub" firstAttribute="top" secondItem="wpV-LS-ioH" secondAttribute="bottom" constant="206" id="DXK-0k-cMW"/>
                             <constraint firstItem="fOM-T6-HWK" firstAttribute="top" secondItem="Fz4-9P-oub" secondAttribute="bottom" constant="32" id="H5d-wB-bb3"/>
                             <constraint firstItem="NEL-L7-afE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hnx-fN-mns"/>
-                            <constraint firstItem="Fz4-9P-oub" firstAttribute="centerX" secondItem="NEL-L7-afE" secondAttribute="centerX" id="sYD-ol-x8K"/>
+                            <constraint firstItem="fOM-T6-HWK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bsU-Ac-aZd"/>
+                            <constraint firstItem="fdv-f8-y2n" firstAttribute="top" secondItem="NEL-L7-afE" secondAttribute="top" id="iOT-cO-vWd"/>
+                            <constraint firstItem="fdv-f8-y2n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q1S-IZ-ge4"/>
+                            <constraint firstItem="Fz4-9P-oub" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uVc-Gp-xZc"/>
                             <constraint firstItem="wpV-LS-ioH" firstAttribute="top" secondItem="NEL-L7-afE" secondAttribute="bottom" constant="20" id="v2g-Ex-9wL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="Fz4-9P-oub" id="oCH-dK-zTH"/>
-                        <outlet property="questionLabel" destination="NEL-L7-afE" id="Vib-7C-tTK"/>
+                        <outlet property="currentQuestionLabel" destination="NEL-L7-afE" id="Af9-qv-gvc"/>
+                        <outlet property="currentQuestionLabelCenterXConstraint" destination="Hnx-fN-mns" id="AXl-O3-0L8"/>
+                        <outlet property="nextQuestionLabel" destination="fdv-f8-y2n" id="8gd-fe-zf4"/>
+                        <outlet property="nextQuestionLabelCenterXConstraint" destination="q1S-IZ-ge4" id="cYy-3p-Qn6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
