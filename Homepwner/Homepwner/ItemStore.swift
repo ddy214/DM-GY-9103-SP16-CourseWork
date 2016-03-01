@@ -11,17 +11,24 @@ import UIKit
 
 class ItemStore {
     
-//    init(){
+    init(){
 //        for _ in 0..<5{
 //            createItem()
 //        }
-//    }
-//    
+        
+        let newItem = Item(random: true)
+        newItem.name = "No More Rows"
+        allItems.append(newItem)
+    }
+    
     var allItems = [Item]()
     
     func createItem()->Item{
+        let emptyItem = allItems.popLast()
         let newItem = Item(random:true)
         allItems.append(newItem)
+        allItems.append(emptyItem!)
+        
         return newItem
     }
     
@@ -35,8 +42,10 @@ class ItemStore {
         if fromIndex == toIndex{
             return
         }
+        if toIndex == allItems.count-1 {
+            return
+        }
         let movedItem = allItems[fromIndex]
-        
         allItems.removeAtIndex(fromIndex)
         allItems.insert(movedItem, atIndex:toIndex)
     }

@@ -51,6 +51,9 @@ class ItemsViewController:UITableViewController{
         //tableView.rowHeight = 65
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
+//        let numItems = itemStore.allItems.count
+//        self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow:numItems, inSection: 0)], withRowAnimation: .Automatic)
+        
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,12 +68,21 @@ class ItemsViewController:UITableViewController{
         cell.updateLabels()
         
         let item = itemStore.allItems[indexPath.row]
+        if item.name == "No More Rows" {
+            cell.serialNumberLabel.text =  item.name
+            return cell
+        }
 //        cell.textLabel?.text = item.name
 //        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
         cell.nameLabel.text = item.name
         cell.serialNumberLabel.text = item.serialNumber
         cell.valueLabel.text = "$\(item.valueInDollars)"
-        
+        if item.valueInDollars < 50 {
+            cell.backgroundColor = UIColor.redColor()
+        }
+        else {
+            cell.backgroundColor = UIColor.greenColor()
+        }
         return cell
     }
     
@@ -86,7 +98,7 @@ class ItemsViewController:UITableViewController{
             let cancelAction = UIAlertAction(title:"Cancel", style: .Cancel, handler:nil)
             ac.addAction(cancelAction)
             
-            let deleteAction = UIAlertAction(title:"Delete", style: .Destructive, handler:{(action) -> Void in
+            let deleteAction = UIAlertAction(title:"Remove", style: .Destructive, handler:{(action) -> Void in
                 self.itemStore.removeItem(item)
                 self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             })
@@ -97,8 +109,18 @@ class ItemsViewController:UITableViewController{
     
     override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
         itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
+        tableView.reloadData()
+        
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        let row = itemStore.allItems.count-1
+        if row == indexPath.row {
+            return false
+        }
+        return true
+        
+    }
 
     
 }
