@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Items View Controller-->
+        <!--Homepwner-->
         <scene sceneID="fwI-Mp-xRJ">
             <objects>
                 <tableViewController id="yyf-wr-hAs" customClass="ItemsViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,7 +93,7 @@
                             <outlet property="delegate" destination="yyf-wr-hAs" id="mBh-DZ-xrR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cQD-Pr-lcc"/>
+                    <navigationItem key="navigationItem" title="Homepwner" id="cQD-Pr-lcc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HR7-BQ-y5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,12 +185,16 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Vqo-DD-AvE" firstAttribute="top" secondItem="NnD-Mq-2SZ" secondAttribute="bottom" constant="8" id="2ZA-Zk-Q9q"/>
                             <constraint firstItem="jcg-Ad-SXV" firstAttribute="top" secondItem="Vqo-DD-AvE" secondAttribute="bottom" constant="8" id="9Aq-6k-R2O"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vqo-DD-AvE" secondAttribute="trailing" id="JZL-uj-UOu"/>
                             <constraint firstItem="Vqo-DD-AvE" firstAttribute="leading" secondItem="FU9-w9-0ET" secondAttribute="leadingMargin" id="uwC-2A-qkA"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="c1h-G3-Gu1" appends="YES" id="Qct-d8-dqV"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="dateCreated" destination="NSK-2S-WxU" id="b9B-ln-hsH"/>
@@ -200,6 +204,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbc-M3-X3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="c1h-G3-Gu1">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="753-9v-hxz" id="GVl-dH-mQY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1613" y="267"/>
         </scene>
