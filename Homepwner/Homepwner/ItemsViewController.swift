@@ -25,28 +25,28 @@ class ItemsViewController:UITableViewController{
 
     }
     
-    @IBAction func toggleEditingMode(sender:AnyObject){
-        if editing{
-            sender.setTitle("Edit", forState: .Normal)
-            setEditing(false, animated: true)
-            
-        }
-        else{
-            sender.setTitle("Done", forState: .Normal)
-            setEditing(true, animated: true)
-        }
-    }
+//    @IBAction func toggleEditingMode(sender:AnyObject){
+//        if editing{
+//            sender.setTitle("Edit", forState: .Normal)
+//            setEditing(false, animated: true)
+//            
+//        }
+//        else{
+//            sender.setTitle("Done", forState: .Normal)
+//            setEditing(true, animated: true)
+//        }
+//    }
     var itemStore:ItemStore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
-        
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        
-        tableView.scrollIndicatorInsets = insets
+//        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+//        
+//        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
+//        tableView.contentInset = insets
+//        
+//        tableView.scrollIndicatorInsets = insets
         
         //tableView.rowHeight = 65
         tableView.rowHeight = UITableViewAutomaticDimension
