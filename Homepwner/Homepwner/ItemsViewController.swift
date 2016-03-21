@@ -137,4 +137,9 @@ class ItemsViewController:UITableViewController{
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem()
+    }
 }
