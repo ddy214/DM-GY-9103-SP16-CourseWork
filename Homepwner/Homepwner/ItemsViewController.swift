@@ -121,6 +121,20 @@ class ItemsViewController:UITableViewController{
         return true
         
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowItem"{
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let item = itemStore.allItems[row]
+                let detailViewController = segue.destinationViewController as!DetailsViewController
+                detailViewController.item = item
+            }
+        
+        }
 
     
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 }
