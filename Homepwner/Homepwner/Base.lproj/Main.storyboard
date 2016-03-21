@@ -149,34 +149,64 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSK-2S-WxU">
-                                        <rect key="frame" x="0.0" y="114" width="560" height="362"/>
+                                        <rect key="frame" x="0.0" y="114" width="560" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="CGt-oe-jPG">
+                                        <rect key="frame" x="0.0" y="143" width="560" height="333"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="vWj-uN-Puj" firstAttribute="leading" secondItem="sji-Tu-prv" secondAttribute="leading" id="7PP-f4-9F8"/>
                                     <constraint firstItem="csF-80-qcU" firstAttribute="leading" secondItem="vWj-uN-Puj" secondAttribute="leading" id="zmf-Vt-Azp"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tu8-T5-S63">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="f7O-G2-poe"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="Ngj-Oj-6xJ">
+                                        <connections>
+                                            <action selector="takePicture:" destination="753-9v-hxz" id="Wdv-Yw-gQt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Vqo-DD-AvE" firstAttribute="top" secondItem="NnD-Mq-2SZ" secondAttribute="bottom" constant="8" id="2ZA-Zk-Q9q"/>
-                            <constraint firstItem="jcg-Ad-SXV" firstAttribute="top" secondItem="Vqo-DD-AvE" secondAttribute="bottom" constant="8" id="9Aq-6k-R2O"/>
+                            <constraint firstItem="tu8-T5-S63" firstAttribute="trailing" secondItem="FU9-w9-0ET" secondAttribute="trailingMargin" constant="20" id="ADC-YN-W9r"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vqo-DD-AvE" secondAttribute="trailing" id="JZL-uj-UOu"/>
+                            <constraint firstItem="tu8-T5-S63" firstAttribute="leading" secondItem="FU9-w9-0ET" secondAttribute="leadingMargin" constant="-20" id="OYF-SK-B85"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="tu8-T5-S63" secondAttribute="bottom" id="UXl-py-F5e"/>
+                            <constraint firstItem="tu8-T5-S63" firstAttribute="leading" secondItem="FU9-w9-0ET" secondAttribute="leadingMargin" id="UwW-v1-BrK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tu8-T5-S63" secondAttribute="trailing" id="geD-wC-D2w"/>
+                            <constraint firstItem="tu8-T5-S63" firstAttribute="top" secondItem="Vqo-DD-AvE" secondAttribute="bottom" constant="8" id="oLq-Et-uzS"/>
                             <constraint firstItem="Vqo-DD-AvE" firstAttribute="leading" secondItem="FU9-w9-0ET" secondAttribute="leadingMargin" id="uwC-2A-qkA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UwW-v1-BrK"/>
+                                <exclude reference="geD-wC-D2w"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="c1h-G3-Gu1" appends="YES" id="Qct-d8-dqV"/>
                         </connections>
                     </view>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" systemItem="camera" id="PVK-d7-ud9"/>
+                    </toolbarItems>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dateCreated" destination="NSK-2S-WxU" id="b9B-ln-hsH"/>
+                        <outlet property="imageView" destination="CGt-oe-jPG" id="VO6-ci-f71"/>
                         <outlet property="nameField" destination="csF-80-qcU" id="y9P-9J-2iu"/>
                         <outlet property="serialField" destination="vWj-uN-Puj" id="GWD-CH-4qP"/>
                         <outlet property="valueField" destination="sji-Tu-prv" id="cba-hq-ckO"/>
@@ -194,6 +224,7 @@
         <!--Navigation Controller-->
         <scene sceneID="zz0-nL-WVn">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MiX-VY-pR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bf6-6h-9Ga" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5RU-5A-dd1">
@@ -205,7 +236,6 @@
                         <segue destination="yyf-wr-hAs" kind="relationship" relationship="rootViewController" id="nu1-Cf-ng6"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MiX-VY-pR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="184" y="267"/>
         </scene>

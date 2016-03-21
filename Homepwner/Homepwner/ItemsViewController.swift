@@ -77,12 +77,12 @@ class ItemsViewController:UITableViewController{
         cell.nameLabel.text = item.name
         cell.serialNumberLabel.text = item.serialNumber
         cell.valueLabel.text = "$\(item.valueInDollars)"
-        if item.valueInDollars < 50 {
-            cell.backgroundColor = UIColor.redColor()
-        }
-        else {
-            cell.backgroundColor = UIColor.greenColor()
-        }
+//        if item.valueInDollars < 50 {
+//            cell.backgroundColor = UIColor.redColor()
+//        }
+//        else {
+//            cell.backgroundColor = UIColor.greenColor()
+//        }
         return cell
     }
     
