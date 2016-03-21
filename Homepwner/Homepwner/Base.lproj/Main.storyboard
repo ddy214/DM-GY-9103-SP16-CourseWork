@@ -93,7 +93,13 @@
                             <outlet property="delegate" destination="yyf-wr-hAs" id="mBh-DZ-xrR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Homepwner" id="cQD-Pr-lcc"/>
+                    <navigationItem key="navigationItem" title="Homepwner" id="cQD-Pr-lcc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5EQ-WO-Dcu">
+                            <connections>
+                                <action selector="addNewItem:" destination="yyf-wr-hAs" id="zlO-Wo-sa3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HR7-BQ-y5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +118,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vqo-DD-AvE">
-                                <rect key="frame" x="20" y="72" width="560" height="520"/>
+                                <rect key="frame" x="20" y="72" width="560" height="476"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2TU-qe-ede">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
@@ -172,7 +178,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSK-2S-WxU">
-                                        <rect key="frame" x="0.0" y="114" width="560" height="406"/>
+                                        <rect key="frame" x="0.0" y="114" width="560" height="362"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -196,6 +202,8 @@
                             <outletCollection property="gestureRecognizers" destination="c1h-G3-Gu1" appends="YES" id="Qct-d8-dqV"/>
                         </connections>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dateCreated" destination="NSK-2S-WxU" id="b9B-ln-hsH"/>
                         <outlet property="nameField" destination="csF-80-qcU" id="y9P-9J-2iu"/>
