@@ -30,6 +30,8 @@ class DetailsViewController:UIViewController, UITextFieldDelegate, UINavigationC
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateCreated: UILabel!
     
+    var imageStore:ImageStore!
+    
     var item:Item! {
         didSet {
             navigationItem.title = item.name
@@ -61,7 +63,9 @@ class DetailsViewController:UIViewController, UITextFieldDelegate, UINavigationC
         valueField.text = numberFormatter.stringFromNumber(item.valueInDollars)
         dateCreated.text = dateFormatter.stringFromDate(item.dateCreated)
         
-        
+        let key = item.itemKey
+        let imageToDisplay = imageStore.imageForKey(key)
+        imageView.image = imageToDisplay
         
     }
     
@@ -85,7 +89,9 @@ class DetailsViewController:UIViewController, UITextFieldDelegate, UINavigationC
     }
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageStore.setImage(image, forKey: item.itemKey)
         imageView.image = image
         dismissViewControllerAnimated(true, completion: nil)
+        
     }
 }

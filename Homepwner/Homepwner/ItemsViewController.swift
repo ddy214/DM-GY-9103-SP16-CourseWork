@@ -38,6 +38,8 @@ class ItemsViewController:UITableViewController{
 //    }
     var itemStore:ItemStore!
     
+    var imageStore:ImageStore!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -100,6 +102,7 @@ class ItemsViewController:UITableViewController{
             
             let deleteAction = UIAlertAction(title:"Remove", style: .Destructive, handler:{(action) -> Void in
                 self.itemStore.removeItem(item)
+                self.imageStore.deleteImageForKey(item.itemKey)
                 self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             })
             ac.addAction(deleteAction)
@@ -127,6 +130,7 @@ class ItemsViewController:UITableViewController{
                 let item = itemStore.allItems[row]
                 let detailViewController = segue.destinationViewController as!DetailsViewController
                 detailViewController.item = item
+                detailViewController.imageStore = imageStore
             }
         
         }

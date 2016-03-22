@@ -12,17 +12,31 @@ import UIKit
 class ItemStore {
     
     init(){
-//        for _ in 0..<5{
-//            createItem()
-//        }
-        
-        let newItem = Item(random: true)
-        newItem.name = "No More Rows"
-        allItems.append(newItem)
+        if let archivedItems = NSKeyedUnarchiver.unarchiveObjectWithFile(itemArchiveURL.path!) as? [Item] {
+            allItems += archivedItems
+        }
+        else {
+            let newItem = Item(random: true)
+            newItem.name = "No More Rows"
+            allItems.append(newItem)
+        }
     }
-    
+//    init(){
+////        for _ in 0..<5{
+////            createItem()
+////        }
+//        
+//        let newItem = Item(random: true)
+//        newItem.name = "No More Rows"
+//        allItems.append(newItem)
+//    }
+//    
     var allItems = [Item]()
-    
+    let itemArchiveURL:NSURL = {
+        let documentsDirectories = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        let documentDirectory = documentsDirectories.first!
+        return documentDirectory.URLByAppendingPathComponent("items.archive")
+    }()
     func createItem()->Item{
         let emptyItem = allItems.popLast()
         let newItem = Item(random:true)
@@ -48,5 +62,9 @@ class ItemStore {
         let movedItem = allItems[fromIndex]
         allItems.removeAtIndex(fromIndex)
         allItems.insert(movedItem, atIndex:toIndex)
+    }
+    func saveChanges() -> Bool {
+        print("Saving items to : \(itemArchiveURL.path!)")
+        return NSKeyedArchiver.archiveRootObject(allItems, toFile: itemArchiveURL.path!)
     }
 }
