@@ -10,6 +10,9 @@ import UIKit
 
 class DetailsViewController:UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    @IBAction func changeDate(sender: AnyObject) {
+        
+    }
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
