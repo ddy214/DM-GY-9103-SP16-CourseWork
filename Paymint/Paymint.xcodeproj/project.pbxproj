@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		502AB52E1CBC6C580022173B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502AB52D1CBC6C580022173B /* AppDelegate.swift */; };
+		502AB5301CBC6C580022173B /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502AB52F1CBC6C580022173B /* GroupViewController.swift */; };
+		502AB5331CBC6C580022173B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502AB5311CBC6C580022173B /* Main.storyboard */; };
+		502AB5351CBC6C580022173B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 502AB5341CBC6C580022173B /* Assets.xcassets */; };
+		502AB5381CBC6C580022173B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502AB5361CBC6C580022173B /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		502AB52A1CBC6C580022173B /* Paymint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paymint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		502AB52D1CBC6C580022173B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		502AB52F1CBC6C580022173B /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		502AB5321CBC6C580022173B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		502AB5341CBC6C580022173B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		502AB5371CBC6C580022173B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		502AB5391CBC6C580022173B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		502AB5271CBC6C580022173B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		502AB5211CBC6C580022173B = {
+			isa = PBXGroup;
+			children = (
+				502AB52C1CBC6C580022173B /* Paymint */,
+				502AB52B1CBC6C580022173B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		502AB52B1CBC6C580022173B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				502AB52A1CBC6C580022173B /* Paymint.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		502AB52C1CBC6C580022173B /* Paymint */ = {
+			isa = PBXGroup;
+			children = (
+				502AB52D1CBC6C580022173B /* AppDelegate.swift */,
+				502AB52F1CBC6C580022173B /* GroupViewController.swift */,
+				502AB5311CBC6C580022173B /* Main.storyboard */,
+				502AB5341CBC6C580022173B /* Assets.xcassets */,
+				502AB5361CBC6C580022173B /* LaunchScreen.storyboard */,
+				502AB5391CBC6C580022173B /* Info.plist */,
+			);
+			path = Paymint;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		502AB5291CBC6C580022173B /* Paymint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 502AB53C1CBC6C580022173B /* Build configuration list for PBXNativeTarget "Paymint" */;
+			buildPhases = (
+				502AB5261CBC6C580022173B /* Sources */,
+				502AB5271CBC6C580022173B /* Frameworks */,
+				502AB5281CBC6C580022173B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Paymint;
+			productName = Paymint;
+			productReference = 502AB52A1CBC6C580022173B /* Paymint.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		502AB5221CBC6C580022173B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = nyu.edu;
+				TargetAttributes = {
+					502AB5291CBC6C580022173B = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 502AB5251CBC6C580022173B /* Build configuration list for PBXProject "Paymint" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 502AB5211CBC6C580022173B;
+			productRefGroup = 502AB52B1CBC6C580022173B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				502AB5291CBC6C580022173B /* Paymint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		502AB5281CBC6C580022173B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				502AB5381CBC6C580022173B /* LaunchScreen.storyboard in Resources */,
+				502AB5351CBC6C580022173B /* Assets.xcassets in Resources */,
+				502AB5331CBC6C580022173B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		502AB5261CBC6C580022173B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				502AB5301CBC6C580022173B /* GroupViewController.swift in Sources */,
+				502AB52E1CBC6C580022173B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		502AB5311CBC6C580022173B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				502AB5321CBC6C580022173B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		502AB5361CBC6C580022173B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				502AB5371CBC6C580022173B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		502AB53A1CBC6C580022173B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		502AB53B1CBC6C580022173B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		502AB53D1CBC6C580022173B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Paymint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Paymint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		502AB53E1CBC6C580022173B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Paymint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Paymint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		502AB5251CBC6C580022173B /* Build configuration list for PBXProject "Paymint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				502AB53A1CBC6C580022173B /* Debug */,
+				502AB53B1CBC6C580022173B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		502AB53C1CBC6C580022173B /* Build configuration list for PBXNativeTarget "Paymint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				502AB53D1CBC6C580022173B /* Debug */,
+				502AB53E1CBC6C580022173B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 502AB5221CBC6C580022173B /* Project object */;
+}
