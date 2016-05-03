@@ -30,6 +30,8 @@ class NewBillViewController:UIViewController, UITextFieldDelegate, UITableViewDe
     
     var payArray:[String]!
     
+    var editedArray:[Bool]!
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -54,8 +56,10 @@ class NewBillViewController:UIViewController, UITextFieldDelegate, UITableViewDe
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         self.navigationController!.navigationBar.barTintColor = UIColor(red:0.16,green:0.73,blue:0.61,alpha:1)
         payDict = [String:Float]()
+        editedArray = []
         for user in payGroup.allUsers {
             payDict[user.name] = 0
+            editedArray.append(false)
         }
         
         payArray = { () -> [String] in
@@ -132,11 +136,25 @@ class NewBillViewController:UIViewController, UITextFieldDelegate, UITableViewDe
     func handleEdit(name:String, amt:Float) {
         payDict[name] = amt
         var totalAmount = Float(0)
-        for user in payArray{
-            totalAmount = totalAmount + payDict[user]!
-        }
-        amountField.text = String.localizedStringWithFormat("%.2f", totalAmount)
+        var numPeople = 0
+        var averageAmt = Float(0)
         
+        for user in payArray.indices {
+            totalAmount = totalAmount + payDict[payArray[user]]!
+            editedArray[user] = true
+        }
+        
+        for user in editedArray {
+            if user == false {
+                numPeople += 1
+            }
+        }
+        
+        if totalAmount > amt {
+            averageAmt = (totalAmount - amt)
+        }
+        
+        amountField.text = String.localizedStringWithFormat("%.2f", totalAmount)
         
     }
 }
