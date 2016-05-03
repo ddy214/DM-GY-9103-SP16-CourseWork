@@ -36,6 +36,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.tableView.reloadData()
     }
     
@@ -66,7 +67,6 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("titleCell", forIndexPath: indexPath)
         let item = payGroup.allUsers[indexPath.row]
-        print(item)
         cell.textLabel!.text = item.name
         cell.detailTextLabel!.text = item.email
         return cell

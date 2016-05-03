@@ -13,12 +13,14 @@ class Transaction:NSObject {
     var amount:Float = 0
     var date:NSDate
     var active:Bool
+    var people:[String:Float]
     
-    init(name:String, amount:Float, date:NSDate) {
+    init(name:String, amount:Float, date:NSDate, people:[String:Float]) {
         self.name = name
         self.amount = amount
         self.date = date
         self.active = true
+        self.people = people
     }
     
     override var description: String {

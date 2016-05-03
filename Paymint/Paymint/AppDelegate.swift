@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        transactionStore.allTransactions.append(Transaction(name: "chipotle", amount: 15.0, date: NSDate()))
+        transactionStore.allTransactions.append(Transaction(name: "chipotle", amount: 15.0, date: NSDate(), people: ["cap":Float(0)]))
         let tabBarVC = window?.rootViewController as! UITabBarController
         
         let groupVC = { () -> GroupViewController in
