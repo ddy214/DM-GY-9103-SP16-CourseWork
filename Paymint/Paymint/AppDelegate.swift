@@ -12,10 +12,35 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var transactionStore = TransactionsStore()
+    var userStore = UserStore()
+
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        transactionStore.allTransactions.append(Transaction(name: "chipotle", amount: 15.0, date: NSDate()))
+        let tabBarVC = window?.rootViewController as! UITabBarController
+        
+        let groupVC = { () -> GroupViewController in
+            let vc = tabBarVC.viewControllers![1] as! UINavigationController
+            return vc.topViewController as! GroupViewController
+        
+        }()
+        let newBillVC = { () -> NewBillViewController in
+            let vc = tabBarVC.viewControllers![2] as! UINavigationController
+            return vc.topViewController as! NewBillViewController
+        }()
+        
+        let transactionsVC = { () -> TransactionsListViewController in
+            let vc = tabBarVC.viewControllers![0] as! UINavigationController
+            return vc.topViewController as! TransactionsListViewController
+        }()
+        
+        newBillVC.transactionStore = transactionStore
+        transactionsVC.transactionStore = transactionStore
+        groupVC.payGroup = userStore
+        newBillVC.payGroup = userStore
         return true
     }
 

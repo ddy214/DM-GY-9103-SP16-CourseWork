@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500877F21CD7924200C5F8A5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500877F11CD7924100C5F8A5 /* User.swift */; };
+		501EA0DB1CD2CF3800942251 /* DetailTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501EA0DA1CD2CF3700942251 /* DetailTransactionViewController.swift */; };
 		502AB52E1CBC6C580022173B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502AB52D1CBC6C580022173B /* AppDelegate.swift */; };
 		502AB5301CBC6C580022173B /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502AB52F1CBC6C580022173B /* GroupViewController.swift */; };
 		502AB5331CBC6C580022173B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502AB5311CBC6C580022173B /* Main.storyboard */; };
 		502AB5351CBC6C580022173B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 502AB5341CBC6C580022173B /* Assets.xcassets */; };
 		502AB5381CBC6C580022173B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502AB5361CBC6C580022173B /* LaunchScreen.storyboard */; };
+		503423B01CC6F1B6002D4101 /* NewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503423AF1CC6F1B6002D4101 /* NewBillViewController.swift */; };
+		504A29D61CD7DD2F00BF7720 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504A29D51CD7DD2F00BF7720 /* UserStore.swift */; };
+		504A29D81CD7FD1F00BF7720 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504A29D71CD7FD1E00BF7720 /* AddUserViewController.swift */; };
+		504A29DA1CD7FD5600BF7720 /* GetDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504A29D91CD7FD5600BF7720 /* GetDataDelegate.swift */; };
+		50E2D28B1CCFD6A300EA7559 /* TransactionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2D28A1CCFD6A300EA7559 /* TransactionsListViewController.swift */; };
+		50E2D28D1CCFDA3400EA7559 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2D28C1CCFDA3400EA7559 /* Transaction.swift */; };
+		50E2D28F1CCFE05F00EA7559 /* TransactionsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2D28E1CCFE05F00EA7559 /* TransactionsStore.swift */; };
+		50E2D2911CD00AE900EA7559 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2D2901CD00AE900EA7559 /* TransactionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		500877F11CD7924100C5F8A5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		501EA0DA1CD2CF3700942251 /* DetailTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTransactionViewController.swift; sourceTree = "<group>"; };
 		502AB52A1CBC6C580022173B /* Paymint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paymint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		502AB52D1CBC6C580022173B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		502AB52F1CBC6C580022173B /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +34,14 @@
 		502AB5341CBC6C580022173B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		502AB5371CBC6C580022173B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		502AB5391CBC6C580022173B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		503423AF1CC6F1B6002D4101 /* NewBillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBillViewController.swift; sourceTree = "<group>"; };
+		504A29D51CD7DD2F00BF7720 /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		504A29D71CD7FD1E00BF7720 /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		504A29D91CD7FD5600BF7720 /* GetDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDataDelegate.swift; sourceTree = "<group>"; };
+		50E2D28A1CCFD6A300EA7559 /* TransactionsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsListViewController.swift; sourceTree = "<group>"; };
+		50E2D28C1CCFDA3400EA7559 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		50E2D28E1CCFE05F00EA7559 /* TransactionsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsStore.swift; sourceTree = "<group>"; };
+		50E2D2901CD00AE900EA7559 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +55,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		501EA0D81CD2CEEB00942251 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				503423AF1CC6F1B6002D4101 /* NewBillViewController.swift */,
+				50E2D28A1CCFD6A300EA7559 /* TransactionsListViewController.swift */,
+				502AB52F1CBC6C580022173B /* GroupViewController.swift */,
+				501EA0DA1CD2CF3700942251 /* DetailTransactionViewController.swift */,
+				504A29D71CD7FD1E00BF7720 /* AddUserViewController.swift */,
+				504A29D91CD7FD5600BF7720 /* GetDataDelegate.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		501EA0D91CD2CF0B00942251 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50E2D28C1CCFDA3400EA7559 /* Transaction.swift */,
+				50E2D2901CD00AE900EA7559 /* TransactionCell.swift */,
+				50E2D28E1CCFE05F00EA7559 /* TransactionsStore.swift */,
+				500877F11CD7924100C5F8A5 /* User.swift */,
+				504A29D51CD7DD2F00BF7720 /* UserStore.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		502AB5211CBC6C580022173B = {
 			isa = PBXGroup;
 			children = (
@@ -55,8 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				502AB52D1CBC6C580022173B /* AppDelegate.swift */,
-				502AB52F1CBC6C580022173B /* GroupViewController.swift */,
+				501EA0D81CD2CEEB00942251 /* ViewController */,
 				502AB5311CBC6C580022173B /* Main.storyboard */,
+				501EA0D91CD2CF0B00942251 /* Model */,
 				502AB5341CBC6C580022173B /* Assets.xcassets */,
 				502AB5361CBC6C580022173B /* LaunchScreen.storyboard */,
 				502AB5391CBC6C580022173B /* Info.plist */,
@@ -135,8 +181,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504A29D81CD7FD1F00BF7720 /* AddUserViewController.swift in Sources */,
+				501EA0DB1CD2CF3800942251 /* DetailTransactionViewController.swift in Sources */,
+				50E2D2911CD00AE900EA7559 /* TransactionCell.swift in Sources */,
+				50E2D28D1CCFDA3400EA7559 /* Transaction.swift in Sources */,
 				502AB5301CBC6C580022173B /* GroupViewController.swift in Sources */,
+				504A29DA1CD7FD5600BF7720 /* GetDataDelegate.swift in Sources */,
 				502AB52E1CBC6C580022173B /* AppDelegate.swift in Sources */,
+				500877F21CD7924200C5F8A5 /* User.swift in Sources */,
+				504A29D61CD7DD2F00BF7720 /* UserStore.swift in Sources */,
+				503423B01CC6F1B6002D4101 /* NewBillViewController.swift in Sources */,
+				50E2D28F1CCFE05F00EA7559 /* TransactionsStore.swift in Sources */,
+				50E2D28B1CCFD6A300EA7559 /* TransactionsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +342,7 @@
 				502AB53E1CBC6C580022173B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
